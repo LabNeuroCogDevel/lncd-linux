@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -xe
 
-pacman -Sy git base-devel stow nodm mlocate gfortran --noconfirm
+pacman -Sy git base-devel stow gfortran --noconfirm
 
 utildir=/opt/utils/
 [ ! -d  $utildir ] && mkdir -p $uitldir
@@ -13,12 +13,21 @@ git clone https://aur.archlinux.org/yaourt.git
 (cd package-query && makepkg -si )
 (cd yaourt &&  makepkg -si )
 
-yaourt --noconfirm -S terminology emacs rstudio-desktop-bin pcmanfm firefox \
-	fasd flameshot xorg-xinit \
+yaourt --noconfirm -S \
+	terminology xterm \
+	vim emacs rstudio-desktop-bin atom \
+       	pcmanfm firefox \
+	nodm xorg-xinit  \
+	flameshot \
 	libpng12 fsl \
-	the_silver_searcher \
+	fasd the_silver_searcher rofi mlocate \
 	slack-libpurple-git pidgin zim \
 	openbox tint2 xbindkeys xcompmgr \
-	zotero
+	zotero gnumeric \
+	julia 
 
 # afni needs libpng12
+
+# julia for atom
+apm install uber-juno ide-r
+#Rscript -e "install.packages(c('languageserver','atom-language-r'))"
