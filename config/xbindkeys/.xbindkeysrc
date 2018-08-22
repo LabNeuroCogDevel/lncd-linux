@@ -1,0 +1,7 @@
+"terminology"
+  Mod4 + Return
+
+"rofi  -modi combi,window,run,ssh -show combi -combi window,run"
+  F1
+"rofi  -modi combi,window,run,ssh -show combi -combi window,run"
+  Mod4 + d
