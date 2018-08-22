@@ -1,0 +1,44 @@
+# This is an example PKGBUILD file. Use this as a start to creating your own,
+# and remove these comments. For more information, see 'man PKGBUILD'.
+# NOTE: Please fill out the license field for your package! If it is unknown,
+# then please put 'unknown'.
+
+# Maintainer: Your Name <youremail@domain.com>
+pkgname=root-tail
+pkgver=1.2
+pkgrel=1
+epoch=
+pkgdesc="display logfiles in different colours on your root-window. That is, it works just like tail -f"
+arch=(x86_64)
+url="http://oldhome.schmorp.de/marc/root-tail.html"
+license=('GPL')
+groups=()
+depends=()
+makedepends=(imake)
+checkdepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+source=("http://oldhome.schmorp.de/marc/data/$pkgname-$pkgver.tar.gz")
+noextract=()
+md5sums=('5a4b3c4c7ab3bed1f4575e9688aac5de')
+validpgpkeys=()
+
+
+build() {
+	cd "$pkgname-$pkgver"
+	xmkmf -a
+        make
+}
+
+
+package() {
+	cd "$pkgname-$pkgver"
+	make DESTDIR="$pkgdir/" install
+	make DESTDIR="$pkgdir/" install.man
+}

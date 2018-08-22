@@ -1,0 +1,17 @@
+KEYS:
+  win + d      launcher/window selector
+  win + enter  new terminal
+TERM:
+  s r       # go to rhea w/X forwarding
+ WALK:
+  cd ..     # go up
+  cd -      # jump back
+  cd ~      # go home
+  cd /      # go to root
+ EDIT:
+  z partial # go to dir matching partial
+  cltr + a  # go to start
+  cltr + e  # go to end
+  ctrl + w  # delete word back
+  cltr + y  # paste deleted word
+  ctrl + _  # undoo

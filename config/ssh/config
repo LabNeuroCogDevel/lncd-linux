@@ -1,0 +1,22 @@
+Host r s a reese g w
+ User lncd
+ ForwardX11 yes
+ ForwardX11Trusted yes
+
+Host r rhea
+ Hostname rhea.wpic.upmc.edu
+
+Host s skynet
+ Hostname 10.145.64.109
+
+Host a arnold
+ Hostname arnold.wpic.upmc.edu
+
+Host g gromit
+ Hostname gromit.wpic.upmc.edu
+
+Host w wallace
+ Hostname gromit.wpic.upmc.edu
+
+Host reese
+ Hostname 10.145.64.121

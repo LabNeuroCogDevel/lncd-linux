@@ -17,7 +17,7 @@ yaourt --noconfirm -S \
 	terminology xterm \
 	vim emacs rstudio-desktop-bin atom \
        	pcmanfm firefox \
-	nodm xorg-xinit  \
+	nodm xorg-xinit  xscreensaver\
 	flameshot \
 	libpng12 fsl \
 	fasd the_silver_searcher rofi mlocate \
@@ -26,6 +26,7 @@ yaourt --noconfirm -S \
 	zotero gnumeric \
 	julia 
 
+yaourt -S ttf-iosevka ttf-bitstream-vera ttf-freefont
 # afni needs libpng12
 
 # julia for atom
