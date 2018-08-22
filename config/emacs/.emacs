@@ -9,6 +9,7 @@
 	("elpy" . "https://jorgenschaefer.github.io/packages/")
       ))
 (package-initialize)
+(mapc 'package-install '(use-package monokai-theme))
 ;; 20180223 -- use-package for org-brain; 20180628 use package for most things
 (require 'use-package)
 
@@ -42,7 +43,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(initial-buffer-choice t)
- '(package-selected-packages (quote (evil ess company monokai-theme helm))))
+ '(package-selected-packages (quote (use-package evil ess company monokai-theme helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
