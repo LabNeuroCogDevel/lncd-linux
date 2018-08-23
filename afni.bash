@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 which afni >/dev/null && exit 0
+[ -r /opt/ni_tools/afni/afni ] && exit 0
 [ ! -r afni_xorg.tgz ] && curl 'https://afni.nimh.nih.gov/pub/dist/tgz/linux_xorg7_64.tgz' > afni_xorg.tgz
 [ ! -d /opt/ni_tools ] && mkdir -p /opt/ni_tools
 tar -C /opt/ni_tools/ -xzvf afni_xorg.tgz 
