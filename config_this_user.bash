@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-[ ! -d ~/src/ ] && mkdir ~/src
-[ ! -e ~/src/lncd-linux ] && \
-  git clone https://github.com/LabNeuroCogDevel/lncd-linux.git ~/src/lncd-linux
+[ ! -d $HOME/src/ ] && mkdir $HOME/src
+[ ! -e $HOME/src/lncd-linux ] && \
+  git clone https://github.com/LabNeuroCogDevel/lncd-linux.git $HOME/src/lncd-linux
 
 stowit(){ 
 	[ ! -d $1 ] && mkdir -p $1
