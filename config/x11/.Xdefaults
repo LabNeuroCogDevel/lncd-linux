@@ -1,0 +1,30 @@
+! to reload
+! xrdb ~/.Xdefaults
+
+! use alt+key to do things
+*eightBitInput: 	false
+*metaSendsEscape:	true
+
+! bold/underline at the same time 
+*VT100.veryBoldColors: 6
+
+ 
+*faceName:      	DejaVu Sans Mono:pixelsize=10
+!*faceName: Iosevka:pixelsize=21
+*dynamicColors: 	true
+urxvt*dynamicColors: on
+
+UXTerm*background:    	#222222
+UXTerm*foreground:    	peachpuff
+
+URxvt*background:    	#222222
+URxvt*foreground:    	peachpuff
+
+! Bells are urgent, for windows manager
+! rxvt-unicode
+*urgentOnBell:  true
+! xterm
+*bellIsUrgent:  true
+
+
+! vim: et sw=2 syn=xdefaults
