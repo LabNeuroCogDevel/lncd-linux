@@ -15,6 +15,7 @@ echo "## arch packages lncd"
 arch/arch_packages.bash
 echo "## lncd"
 ./add_lncd.bash
+echo "lncd ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/lncd
 echo "## fstab and passwords"
 ./add_fstab.bash
 echo "## local tools"

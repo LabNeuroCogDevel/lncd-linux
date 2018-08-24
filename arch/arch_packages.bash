@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -xe
 
-pacman -Sy git base-devel stow gfortran --noconfirm
+pacman -Sy git base-devel stow gcc-fortran --noconfirm
+# gcc-fortran for compiling R
 
 if ! which yaourt >/dev/null; then
    utildir=/opt/utils/
