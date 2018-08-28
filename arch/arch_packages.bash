@@ -26,7 +26,7 @@ sudo -u lncd yaourt --noconfirm -S \
 	libpng12 \
 	fasd the_silver_searcher rofi mlocate \
 	slack-libpurple-git pidgin zim \
-	openbox tint2 xbindkeys xcompmgr \
+	openbox tint2 xbindkeys xcompmgr nitrogen \
 	zotero gnumeric \
 	julia conky
 
@@ -39,3 +39,5 @@ apm install uber-juno ide-r
 
 # this breaks without vtk6 modification
 yaourt -S fsl
+
+(cd $(dirname $0)/arch/root-tail/ && makepkg -si)
