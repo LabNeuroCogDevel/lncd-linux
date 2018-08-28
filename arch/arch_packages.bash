@@ -17,7 +17,7 @@ if ! which yaourt >/dev/null; then
    cd -
 fi
 
-yaourt --noconfirm -S \
+sudo -u lncd yaourt --noconfirm -S \
 	terminology xterm \
 	vim emacs rstudio-desktop-bin atom \
    sudo pcmanfm firefox \
@@ -28,9 +28,9 @@ yaourt --noconfirm -S \
 	slack-libpurple-git pidgin zim \
 	openbox tint2 xbindkeys xcompmgr \
 	zotero gnumeric \
-	julia 
+	julia conky
 
-yaourt -S ttf-iosevka ttf-bitstream-vera ttf-freefont
+sudo -u lncd yaourt -S ttf-iosevka ttf-bitstream-vera ttf-freefont
 # afni needs libpng12
 
 # julia for atom

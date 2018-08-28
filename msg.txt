@@ -8,10 +8,10 @@ TERM:
   cd -      # jump back
   cd ~      # go home
   cd /      # go to root
+  z pattern # go to dir matching 'pattern'
  EDIT:
-  z partial # go to dir matching partial
   cltr + a  # go to start
   cltr + e  # go to end
   ctrl + w  # delete word back
   cltr + y  # paste deleted word
-  ctrl + _  # undoo
+  ctrl + _  # undo
