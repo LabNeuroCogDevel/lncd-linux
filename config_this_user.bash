@@ -20,7 +20,7 @@ for prog in emacs bash x11 xbindkeys vim; do
 done
 
 # ~/.config/ config files
-for prog in tint2 openbox nitrogen; do
+for prog in tint2 openbox nitrogen conky; do
  stowit ~/.config/$prog $prog
 done
 
