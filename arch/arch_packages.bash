@@ -40,4 +40,4 @@ apm install uber-juno ide-r
 # this breaks without vtk6 modification
 yaourt -S fsl
 
-(cd $(dirname $0)/arch/root-tail/ && makepkg -si)
+#(cd $(dirname $0)/arch/root-tail/ && makepkg -si)
