@@ -15,6 +15,7 @@ stowit(){
 }
 
 # generic dot files
+[ -r ~/.bashrc ] && mv ~/.bashrc{,_$(date +%FT%H:%M)} # .bashrc exists most places, stow needs it to not
 for prog in emacs bash x11 xbindkeys vim; do
 	stowit ~ $prog
 done

@@ -1,7 +1,7 @@
 #
 # ~/.bashrc
 #
-
+export LANG="en_US.UTF8"
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
