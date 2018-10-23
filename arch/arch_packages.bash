@@ -23,12 +23,12 @@ i \
 	terminology xterm \
 	vim emacs rstudio-desktop-bin atom \
    pcmanfm firefox \
-	nodm xorg-xinit  xscreensaver\
+	xorg-xinit  xscreensaver lightdm lightdm-gtk-greeter accountsservice\
 	flameshot \
 	libpng12 \
 	fasd the_silver_searcher rofi mlocate \
 	slack-libpurple-git pidgin zim \
-	openbox tint2 xbindkeys xcompmgr nitrogen \
+	openbox tint2 xbindkeys xcompmgr nitrogen lxpanel gtk-chtheme \
 	zotero gnumeric \
 	julia conky \
    exa bat diff-so-fancy

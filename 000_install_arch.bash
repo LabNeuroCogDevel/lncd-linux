@@ -23,7 +23,8 @@ echo "## local tools"
 echo "## afni"
 ./afni.bash
 
-echo "## nodm"
-cp etc/nodm.conf /etc/nodm.conf
+echo "## login manager (lightdm)"
+#cp etc/nodm.conf /etc/nodm.conf
+cp etc/lightdm.conf /etc/lightdm/lightdm.conf
 
 sudo -u lncd ./config_this_user.bash
