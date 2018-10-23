@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -xe
 
-pacman -Sy git base-devel stow gcc-fortran --noconfirm
+pacman -Sy git sudo base-devel stow gcc-fortran --noconfirm
 # gcc-fortran for compiling R
 
 if ! which yaourt >/dev/null; then
@@ -17,10 +17,12 @@ if ! which yaourt >/dev/null; then
    cd -
 fi
 
-sudo -u lncd yaourt --noconfirm -S \
+alias i='sudo -u lncd yaourt --noconfirm -S'
+
+i \
 	terminology xterm \
 	vim emacs rstudio-desktop-bin atom \
-   sudo pcmanfm firefox \
+   pcmanfm firefox \
 	nodm xorg-xinit  xscreensaver\
 	flameshot \
 	libpng12 \
@@ -28,9 +30,10 @@ sudo -u lncd yaourt --noconfirm -S \
 	slack-libpurple-git pidgin zim \
 	openbox tint2 xbindkeys xcompmgr nitrogen \
 	zotero gnumeric \
-	julia conky
+	julia conky \
+   exa bat diff-so-fancy
 
-sudo -u lncd yaourt -S ttf-iosevka ttf-bitstream-vera ttf-freefont
+i ttf-iosevka ttf-bitstream-vera ttf-freefont
 # afni needs libpng12
 
 # julia for atom
@@ -38,6 +41,6 @@ apm install uber-juno ide-r
 #Rscript -e "install.packages(c('languageserver','atom-language-r'))"
 
 # this breaks without vtk6 modification
-yaourt -S fsl
+i fsl
 
 #(cd $(dirname $0)/arch/root-tail/ && makepkg -si)

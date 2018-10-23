@@ -1,0 +1,22 @@
+# -*- mode: sh -*-
+# vim: filetype=sh
+
+alias ls='ls --color=auto'
+alias l='ls --color=auto'
+alias s=ssh # override fasd's s
+alias g="egrep --color=yes" # override fasd's s
+alias p="perl -lne"
+
+
+alias c=bat # cat with wings 
+alias l='exa --git' # rust ls
+alias d='diff-so-fancy'
+
+# package management i (install) q (query/search)
+which apt >/dev/null 2>&1 && { alias i='sudo apt install'; alias q='apt search'; }
+which yaourt >/dev/null 2>&1 && { alias i='yaourt -S'; alias q='yaourt -Ss'; }
+
+# see whats new
+n() { ls -tlc $@ | sed 10q; }
+
+
