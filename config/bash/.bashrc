@@ -25,4 +25,4 @@ source /opt/utils/fuzzy_arg/fuzzy_arg.bash
 
 export PATH="$PATH:/opt/ni_tools/afni"
 
-
+alias i='sudo pacman -S --noconfirm'
