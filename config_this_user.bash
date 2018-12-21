@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
+
 # stop if root
 [ $(id -u) -lt 10 ] && echo "ERROR: $0: run as lncd not $(whoami)!" >&2 && exit 1
+
+# stop if no stow 
+! command -v stow >/dev/null && echo "need stow installed" && exit 1
 
 # get all of version control scripts into user home (mostly for config)
 [ ! -d $HOME/src/ ] && mkdir $HOME/src
