@@ -15,7 +15,7 @@ stowit(){
 }
 
 # generic dot files
-for prog in emacs bash x11 xbindkeys vim; do
+for prog in emacs bash x11 xbindkeys vim xscreensaver; do
 	stowit ~ $prog
 done
 

@@ -8,6 +8,7 @@
 
 # fasd: alias for z, f, v
 eval "$(fasd --init auto)"
+alias s=ssh
 
 source $HOME/.aliases
 source $HOME/.promptrc
