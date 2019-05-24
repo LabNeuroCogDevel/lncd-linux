@@ -1,5 +1,12 @@
+"pcmanfm"
+  Mod4 + f
+"arandr"
+  Mod4 + m
+"firefox"
+  Mod4 + w
 "uxterm"
   Mod4 + Return
+
 "rofi  -modi combi,window,run,ssh -show combi -combi window,run"
   Mod4 + d
 "rofi  -modi combi,window,run,ssh -show combi -combi window,run"

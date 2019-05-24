@@ -1,17 +1,26 @@
-KEYS:
-  win + d      launcher/window selector
+
+NOTES
+ - bottom left app icons, fist is menu
+
+ - left panel of file browser for
+   usb devices
+
+ - bottom right sys tray for wireless  
+
+ - `pacman -Ss ` to search software
+   `i` to install
+
+KEYS
+  win + f      file browser
+  win + m      monitor settings
+  win + w      web
   win + enter  new terminal
-TERM:
-  s r       # go to rhea w/X forwarding
- WALK:
-  cd ..     # go up
-  cd -      # jump back
-  cd ~      # go home
-  cd /      # go to root
-  z pattern # go to dir matching 'pattern'
- EDIT:
-  cltr + a  # go to start
-  cltr + e  # go to end
-  ctrl + w  # delete word back
-  cltr + y  # paste deleted word
-  ctrl + _  # undo
+  win + d      launcher/window selector
+  
+APPS
+  ppt  libreoffice
+  web  firefox
+  pdf  evince
+
+bea_res
+  ~/b_via_reese.bash -> ~/L/bea_res
