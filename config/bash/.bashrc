@@ -20,6 +20,7 @@ eval "$(fasd --init auto)"
 source $HOME/.aliases
 source $HOME/.promptrc
 source /opt/utils/fuzzy_arg/fuzzy_arg.bash
+source /opt/utils/fuzzy_arg/fuzzy_new_complete.bash
 
 export PATH="$PATH:/opt/ni_tools/afni"
 

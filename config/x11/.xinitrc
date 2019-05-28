@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 xrdb ~/.Xdefaults # default term colors, alt key in xterm
 xcompmgr &
-tint2 & #plank & # bottom panel
+#tint2 & #plank & # bottom panel
 lxpanel & # top panel
 xrandr --output DVI-I-1 --left-of VGA-1
 nitrogen --restore 
