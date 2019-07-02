@@ -1,27 +1,34 @@
 #!/usr/bin/env bash
+
+#
+# 20190702 - install packagse from aur
+# require not root user
+# 
+ utildir=/opt/utils/
+if [ $USER == "root" ]; then
+	[ -d $utildir ] && chown lncd: -R $utildir
+	su lncd $0
+	exit
+fi
 set -xe
 
-pacman -Sy git sudo base-devel stow gcc-fortran --noconfirm
-# gcc-fortran for compiling R
-
 if ! which yaourt >/dev/null; then
-   utildir=/opt/utils/
    [ ! -d  $utildir ] && mkdir -p $uitldir
 
    cd $utildir
-   git clone https://aur.archlinux.org/package-query.git
-   git clone https://aur.archlinux.org/yaourt.git
+   [ ! -d package-query ] && git clone https://aur.archlinux.org/package-query.git
+   [ ! -d yaourt ] && git clone https://aur.archlinux.org/yaourt.git
 
    (cd package-query && makepkg -si )
    (cd yaourt &&  makepkg -si )
    cd -
 fi
 
-alias i='sudo -u lncd yaourt --noconfirm -S'
+i(){ yaourt --noconfirm -S $@; }
 
 i \
 	terminology xterm \
-	vim emacs rstudio-desktop-bin atom \
+	gvim emacs rstudio-desktop-bin atom \
    pcmanfm firefox \
 	xorg-xinit  xscreensaver lightdm lightdm-gtk-greeter accountsservice\
 	flameshot \

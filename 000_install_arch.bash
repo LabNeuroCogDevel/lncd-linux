@@ -12,10 +12,12 @@ rootinstall=/opt/utils/lncd-linux
 cd $rootinstall
 
 echo "## arch packages lncd"
-arch/arch_packages.bash
+arch/01_arch_packages.bash
 echo "## lncd"
 ./add_lncd.bash
 echo "lncd ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/lncd
+echo "## AUR packages"
+arch/02_arch_yaourt_pkgs.bash
 echo "## fstab and passwords"
 ./add_fstab.bash
 echo "## local tools"
