@@ -19,6 +19,7 @@ stowit(){
 }
 
 # generic dot files
+[ -r ~/.bashrc ] && mv ~/.bashrc{,.orig}
 for prog in emacs bash x11 xbindkeys vim; do
 	stowit ~ $prog
 done

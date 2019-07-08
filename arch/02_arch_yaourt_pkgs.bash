@@ -4,16 +4,17 @@
 # 20190702 - install packagse from aur
 # require not root user
 # 
- utildir=/opt/utils/
+utildir="/opt/utils/"
 if [ $USER == "root" ]; then
-	[ -d $utildir ] && chown lncd: -R $utildir
+	[ ! -d $utildir ] && mkdir -p $utildir
+	chown lncd: -R $utildir
 	su lncd $0
 	exit
 fi
 set -xe
 
 if ! which yaourt >/dev/null; then
-   [ ! -d  $utildir ] && mkdir -p $uitldir
+   [ ! -d $utildir ] && mkdir -p $utildir
 
    cd $utildir
    [ ! -d package-query ] && git clone https://aur.archlinux.org/package-query.git
