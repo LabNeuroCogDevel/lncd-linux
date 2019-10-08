@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if ! grep Zeus /etc/fstab; then
+if grep Zeus /etc/fstab; then
   exit 0
 fi
 
